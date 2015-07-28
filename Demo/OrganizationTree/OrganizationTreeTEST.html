@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+                .DepartItem {
+                    height: 100px;
+                    width: 100px;
+                    margin: 3px;
+                }
+
+                .Tree {
+                    text-align: center;
+                    align-items: center;
+                }
+
+                .node {
+                    height: 200px;
+                    text-align: center;
+                    align-items: center;
+                    margin: 6px;
+                }
+
+                    .node > .btn-default {
+                        white-space: normal;
+                        box-shadow: #a9a9a9 1px 1px 3px;
+                    }
+
+                    /*.node > .btn-default
+        {
+            white-space:normal;
+            font-weight:bold;
+            background-color:#1e50a2;
+            color:#fff;
+        }
+
+        .node > .btn-default:hover
+        {
+            background-color:#3e62ad;
+        }*/
+
+                    .node > table td {
+                        border-top: 3px solid #cdcdcd;
+                    }
+    </style>
+    <title></title>
+</head>
+<body>
+    <div ng-app="OTree" ng-controller="OTreeController">
+        <div ng-repeat="DP in Departments">
+            <treenode click="To" datasource="DP" ss="Departments.length"></treenode>
+        </div>
+    </div>        
+    <script src="../Scripts/angular-1.2.28/angular.min.js"></script>
+    <script src="../Scripts/angular-recursion.js"></script>
+    <script type="text/javascript">
+        var AngularJS_directive =
+            {
+                OrganizeTree: function (RecursionHelper) {
+                    var directive = {};
+                    directive.restrict = 'E';
+                    directive.template =
+                        '<div class="node">' +
+                            '<button type="button" class="btn btn-default DepartItem" ng-click="To(datasource.P01DEP)">' +
+                                '<span>{{datasource.P01SNM}}<br />({{datasource.P01DEP}})</span>' +
+                            '</button>' +
+                            '<table style="width:100%" style="border:1px solid #cdcdcd">' +
+                                '<tr>' +
+                                '<td ng-repeat="c in datasource.Childs">' +
+                                    '<treenode click="To" datasource="c" ss="datasource.Childs.length" ></treenode>' +
+                                '</td>' +
+                                '</tr>' +
+                            '</table>' +
+                        '</div>';
+
+
+                    directive.scope = {
+                        datasource: '=',
+                        click: '&',
+                        ss: '='
+                    }
+
+                    directive.compile = function (element) {
+                        return RecursionHelper.compile(element, function (scope, iElement, iAttrs, controller, transcludeFn) {
+
+                        });
+                    }
+
+                    directive.controller = function ($scope) {
+
+                        $scope.To = function (dep) {
+
+                            $scope.click()(dep);
+
+                        };
+
+                        $scope.getWidth = function (cc) {
+                            // var cc = obj.length;
+
+                            if (cc == undefined)
+                                cc = 1;
+
+                            //var o = 'col-xs-' + Math.floor(12 / cc);
+
+                            //return  'col-xs-' + Math.floor(12 / cc);
+
+                            return { "width": Math.floor(100 / cc) + '%' };
+                        }
+                    }
+
+                    return directive;
+                }
+            }
+
+        var mainApp = angular.module("OTree", ['RecursionHelper']);/*'ui.bootstrap'*/
+
+        mainApp.directive('treenode', AngularJS_directive.OrganizeTree);
+
+        mainApp.controller('OTreeController', function ($scope, $http) {
+
+            //$scope.AJAX = function (parms, fn, url) {
+
+            //    if (url == undefined)
+            //        url = 'GetJSON.ashx';
+
+            //    $http({
+            //        method: 'POST',
+            //        url: url,
+            //        headers: {
+            //            'Content-Type': 'application/json'
+            //        },
+            //        params: parms
+            //    }).success(
+            //    function (response) {
+            //        fn(response);
+            //    });
+            //}
+
+            //$scope.AJAX({},
+            //         function (response) {
+            //             if (response != 'false')
+            //                 $scope.Departments = response;
+            //         });
+
+
+            $scope.Departments = JSON.parse('[{"P01DEP":"3100","P01SNM":"Department                ","P01UDP":"3000","Childs":[{"P01DEP":"3110","P01SNM":"Section_A                ","P01UDP":"3100","Childs":[{"P01DEP":"3111","P01SNM":"Group_1                ","P01UDP":"3110","Childs":null},{"P01DEP":"3112","P01SNM":"Group_2                ","P01UDP":"3110","Childs":null}]},{"P01DEP":"3140","P01SNM":"Section_B              ","P01UDP":"3100","Childs":[{"P01DEP":"3141","P01SNM":"Group_3          ","P01UDP":"3140","Childs":null},{"P01DEP":"3142","P01SNM":"Group_4          ","P01UDP":"3140","Childs":null}]},{"P01DEP":"3150","P01SNM":"Section_C                  ","P01UDP":"3100","Childs":[{"P01DEP":"3151","P01SNM":"Group_5            ","P01UDP":"3150","Childs":null},{"P01DEP":"3152","P01SNM":"Group_6            ","P01UDP":"3150","Childs":null}]}]}]');
+
+        });
+    </script>
+</body>
+</html>
