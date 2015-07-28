@@ -62,7 +62,7 @@
                         max: 1000,
                         text: ['多', '少'],
                         splitNumber: 0,
-                        color: ['red', 'yellow', '#a9a9a9']
+                        color: ['#ffe4b5', '#c0c0c0', '#a9a9a9']
                     },
                     series: [
                         {
