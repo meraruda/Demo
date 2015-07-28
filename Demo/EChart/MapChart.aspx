@@ -23,14 +23,13 @@
 
         require(
             [
-                'echarts',
-                'echarts/chart/bar',
+                'echarts',                
                 'echarts/chart/map'
             ],
             function (ec) {
 
                 require('echarts/util/mapData/params').params.continent = {
-                    getGeoJson: function (callback) {
+                    getGeoJson: function (callback) {                        
                         $.getJSON('../Scripts/echarts-2.1.10/src/util/mapData/rawData/geoJson/<%=AREA%>.json', callback);
                     }
                 }

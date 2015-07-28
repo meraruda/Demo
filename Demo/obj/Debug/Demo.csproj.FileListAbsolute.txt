@@ -3,4 +3,3 @@ C:\Users\chivalry\documents\visual studio 2013\Projects\Demo\Demo\bin\Demo.dll
 C:\Users\chivalry\documents\visual studio 2013\Projects\Demo\Demo\bin\Demo.pdb
 C:\Users\chivalry\documents\visual studio 2013\Projects\Demo\Demo\obj\Debug\Demo.dll
 C:\Users\chivalry\documents\visual studio 2013\Projects\Demo\Demo\obj\Debug\Demo.pdb
-C:\Users\chivalry\Documents\Visual Studio 2013\Projects\Demo\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
