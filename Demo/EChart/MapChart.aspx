@@ -8,7 +8,7 @@
     <title>EChart</title>
 </head>
 <body>
-    <div id="main" style="height: 800px;"></div>
+    <div id="main" style="width:1200px;height: 400px;"></div>
     <%--  <script src="../Scripts/jquery-2.1.3.min.js"></script>--%>    
     <script src="../Scripts/echarts-2.1.10/build/dist/echarts.js" type="text/javascript"></script>
     <script src="../Scripts/echarts-2.1.10/doc/asset/js/jquery.js" type="text/javascript"></script>
@@ -59,10 +59,10 @@
                     },
                     dataRange: {
                         min: 0,
-                        max: 1000,
+                        max: 2000,
                         text: ['多', '少'],
                         splitNumber: 0,
-                        color: ['#ffe4b5', '#c0c0c0', '#a9a9a9']
+                        color: ['#ff4500', '#c0c0c0', '#a9a9a9']
                     },
                     series: [
                         {

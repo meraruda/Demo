@@ -76,7 +76,7 @@ namespace Demo.EChart
         [WebMethod]
         public static string GetData()
         {
-            return "[{\"name\":\"澳洲\",\"value\":3},{\"name\":\"大洋洲\",\"value\":14},{\"name\":\"歐洲\",\"value\":196},{\"name\":\"美洲\",\"value\":88},{\"name\":\"亞洲\",\"value\":5427},{\"name\":\"非洲\",\"value\":22}]";
+            return "[{\"name\":\"南美洲\",\"value\":1727},{\"name\":\"大洋洲\",\"value\":380},{\"name\":\"歐洲\",\"value\":196},{\"name\":\"北美洲\",\"value\":100},{\"name\":\"亞洲\",\"value\":1427},{\"name\":\"非洲\",\"value\":177}]";
         }
 
         public static string GetNameMap(string _geofile)
