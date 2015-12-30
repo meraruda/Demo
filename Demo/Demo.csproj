@@ -62,8 +62,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EChart\MapChart.aspx" />
-    <Content Include="EChart\MultiChart.html" />
+    <Content Include="Demo_EChart\MapChart.aspx" />
+    <Content Include="Demo_EChart\MultiChart.html" />
     <Content Include="Scripts\angular-1.2.28\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-1.2.28\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-1.2.28\angular-loader.min.js.map" />
@@ -254,7 +254,7 @@
     <Content Include="Scripts\angular-1.2.28\docs\js\search-worker.min.js.map" />
     <Content Include="Scripts\angular-1.2.28\errors.json" />
     <Content Include="Scripts\angular-1.2.28\version.json" />
-    <Content Include="OrganizationTree\GetJSON.ashx" />
+    <Content Include="Demo_AngularJS\GetJSON.ashx" />
     <Content Include="Scripts\echarts-2.1.10\.editorconfig" />
     <Content Include="Scripts\echarts-2.1.10\.jshintignore" />
     <Content Include="Scripts\echarts-2.1.10\.jshintrc" />
@@ -660,12 +660,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Excelcalendar.aspx" />
+    <Content Include="Demo_DotNet\Excelcalendar.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\.NET.png" />
     <Content Include="Images\Css.png" />
     <Content Include="Images\Jquery.png" />
-    <Content Include="OrganizationTree\OrganizationTreeTEST.html" />
+    <Content Include="Demo_AngularJS\OrganizationTreeTEST.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -674,7 +674,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
-    <Content Include="Portal.html" />
+    <Content Include="Demo_Bootstrap\Portal.html" />
     <Content Include="Scripts\angular-1.2.28\angular-animate.js" />
     <Content Include="Scripts\angular-1.2.28\angular-animate.min.js" />
     <Content Include="Scripts\angular-1.2.28\angular-cookies.js" />
@@ -3368,27 +3368,27 @@
     <Content Include="Scripts\jquery-2.1.3.min.js" />
     <Content Include="Scripts\MyPlug.js" />
     <Content Include="Scripts\npm.js" />
-    <Content Include="ValidDemo.html" />
+    <Content Include="Demo_Jquery\ValidDemo.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.3.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EChart\MapChart.aspx.cs">
+    <Compile Include="Demo_EChart\MapChart.aspx.cs">
       <DependentUpon>MapChart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EChart\MapChart.aspx.designer.cs">
+    <Compile Include="Demo_EChart\MapChart.aspx.designer.cs">
       <DependentUpon>MapChart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Excelcalendar.aspx.cs">
+    <Compile Include="Demo_DotNet\Excelcalendar.aspx.cs">
       <DependentUpon>Excelcalendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Excelcalendar.aspx.designer.cs">
+    <Compile Include="Demo_DotNet\Excelcalendar.aspx.designer.cs">
       <DependentUpon>Excelcalendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="OrganizationTree\GetJSON.ashx.cs">
+    <Compile Include="Demo_AngularJS\GetJSON.ashx.cs">
       <DependentUpon>GetJSON.ashx</DependentUpon>
     </Compile>
   </ItemGroup>

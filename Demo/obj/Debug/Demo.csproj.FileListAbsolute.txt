@@ -9,3 +9,9 @@ D:\CodeResposity\MyProject\Demo\Demo\Demo\bin\Demo.pdb
 D:\CodeResposity\MyProject\Demo\Demo\Demo\obj\Debug\Demo.dll
 D:\CodeResposity\MyProject\Demo\Demo\Demo\obj\Debug\Demo.pdb
 D:\CodeResposity\MyProject\Demo\Demo\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+D:\Code\Demo\Demo\bin\Demo.dll.config
+D:\Code\Demo\Demo\bin\Demo.dll
+D:\Code\Demo\Demo\bin\Demo.pdb
+D:\Code\Demo\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+D:\Code\Demo\Demo\obj\Debug\Demo.dll
+D:\Code\Demo\Demo\obj\Debug\Demo.pdb
